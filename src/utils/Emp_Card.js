@@ -3,30 +3,27 @@ import React from "react";
 function Card(props) {
   console.log(props);
   return (
-    <div>
-      {props.employees.map((person) => (
-        <div className="card text-white bg-info mb-3">
-          <div class="card-header">
-            {person.firstName} {person.lastName}
-          </div>
-          <div class="card-body">
-            <p>{person.email}</p>
-            <p>{person.phone}</p>
-            </div>
-        </div>
-      ))}
-    </div>
+    <table className="table">
+      <thead className="thead-dark">
+        <tr>
+          <th scope="col">First Name</th>
+          <th scope="col">Last name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        {props.employees.map((person) => (
+            <tr>
+          <th>{person.firstName}</th>
+          <th>{person.lastName}</th>
+          <th>{person.email}</th>
+          <th>{person.phone}</th>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 }
 
 export default Card;
-
-// {/* <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-  
-//     <h5 class="card-title">Info card title</h5>
-//     <p class="card-text">
-//       Some quick example text to build on the card title and make up the bulk of
-//       the card's content.
-//     </p>
-//   </div>
-// </div>; */}

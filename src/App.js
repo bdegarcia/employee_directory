@@ -65,25 +65,25 @@ const employees = [
     firstName: "Isabelle",
     lastName: "Baker",
     phone: "847-555-6628",
-    email: "bisabelle@realfakedoors.com",
+    email: "ibaker@realfakedoors.com",
   },
   {
     id: 10,
     firstName: "Jill",
     lastName: "Avila",
     phone: "847-555-6629",
-    email: "jchan@realfakedoors.com",
+    email: "javila@realfakedoors.com",
   }
 ];
 
 function App() {
   return (
-    <>
+    <div className="body">
     <div className="jumbotron jumbotron-fluid text-center">
       <h1>Real Fake Doors Employee Directory</h1>
     </div>
     <Card employees={employees} />
-    </>
+    </div>
   );
 }
 

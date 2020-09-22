@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+.jumbotron {
+  background-image: url("./utils/doors.jpg");
+  background-size: cover;
+
+}
+.jumbotron-fluid{
+    margin-bottom: 0;
+    color: beige;
+    min-height: 280px;
+}
