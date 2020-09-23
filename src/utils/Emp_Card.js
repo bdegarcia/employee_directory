@@ -2,6 +2,18 @@ import React from "react";
 
 function Card(props) {
   console.log(props);
+  const searchedSorted = props.employees.filter( employee => (employee.firstName + " " + employee.lastName).toLowerCase().includes(props.search.toLowerCase())).sort( (a,b) => {
+    let x = (a.firstName + a.lastName).toLowerCase();
+    let y = (b.firstName + b.lastName).toLowerCase();
+    if (props.sort === "asc") {
+        if (x < y) return -1;
+        if (x > y) return 1;
+    } else {
+        if (x > y) return -1;
+        if (x < y) return 1;
+    }
+    return 0;
+});
   return (
     <table className="table">
       <thead className="thead-dark">
@@ -13,7 +25,7 @@ function Card(props) {
         </tr>
       </thead>
       <tbody>
-        {props.employees.map((person) => (
+        {searchedSorted.map((person) => (
             <tr>
           <th>{person.firstName}</th>
           <th>{person.lastName}</th>

@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  background-image: url("./utils/doors.jpg");
+  background-size: 50%;
+  min-height: 280px;
+}
+.jumbotron-fluid{
+    margin-bottom: 0;
+    color: beige;
+ 
+}
+.search-div { 
+  margin-top: 3%;
+} 
